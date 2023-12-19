@@ -31,7 +31,7 @@ layout: base
 	<ul>
 		{% for post in site.posts %}
 			<li>
-				<a href="/paper/{{ post.url }}">{{ post.title | smartify }}</a>
+				<a href="/paper{{ post.url }}">{{ post.title | smartify }}</a>
 				<p class="meta">{% include meta.txt post=post %}</p>
 			</li>
 		{% endfor %}
