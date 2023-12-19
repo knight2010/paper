@@ -1,0 +1,161 @@
+body {
+	margin: 0;
+	line-height: 1.5;
+	font-family: Source Sans Pro, sans-serif;
+	color: #404040;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1rem 0;
+}
+
+a:link {
+	color: #2040c0;
+}
+
+a:visited {
+	color: #702090;
+}
+
+hr {
+	margin: 1rem auto;
+	border: medium none;
+	border-top: 1px solid;
+	width: 50%;
+	color: #e0e0e0;
+}
+
+table {
+	border-spacing: 0;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
+}
+
+td, th {
+	padding: 0.1rem 0.4rem;
+	vertical-align: top;
+}
+
+.header {
+	margin: 0 1.5rem;
+}
+
+.home-link:link {
+	display: block;
+	width: 3rem;
+	background-color: #c00040;
+	text-align: center;
+	line-height: 1.5rem;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.home-link:visited {
+	color: #ffffff;
+}
+
+.home-link:hover {
+	background-color: #ff0055;
+}
+
+.admin-link:link {
+	display: block;
+	margin-top: 1rem;
+	float: right;
+	width: 1.5rem;
+	text-align: center;
+	line-height: 3rem;
+	color: #c0c0c0;
+	text-decoration: none;
+}
+
+.admin-link:visited {
+	color: #c0c0c0;
+}
+
+.admin-link:hover {
+	background-color: #f0f0f0;
+}
+
+.feed-link:link {
+	font-size: 1rem;
+	color: #c0c0c0;
+	text-decoration: none;
+}
+
+.feed-link:visited {
+	color: #c0c0c0;
+}
+
+.navigation {
+	margin: 1rem 1.5rem;
+}
+
+.navigation ul {
+	padding: 0;
+	list-style-type: none;
+	columns: 17.75rem auto;
+	column-gap: 1.5rem;
+}
+
+.navigation li {
+	display: block;
+	margin: 1rem 0;
+	max-width: 37rem;
+	line-height: 1.25;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+.navigation li:first-child {
+	margin-top: 0;
+}
+
+.navigation li:last-child {
+	margin-bottom: 0;
+}
+
+.content {
+	margin: 1rem 1.5rem;
+	max-width: 37rem;
+}
+
+.meta {
+	margin: 0;
+	font-size: 0.75rem;
+	color: #808080;
+}
+
+.content > .meta {
+	margin-top: -1rem;
+}
+
+.content > .previous {
+	font-size: 0.75rem;
+	color: #a0a0a0;
+}
+
+.content > .previous > strong {
+	font-weight: normal;
+	color: #404040;
+}
+
+.footer {
+	margin: 1.25rem 0 0;
+	padding: 0 1.5rem 2.8125rem;
+	border-top: 1px solid #e0e0e0;
+	color: #c0c0c0;
+	font-size: 0.75rem;
+}
+
+@media print {
+	.footer span {
+		display: none;
+	}
+
+	.footer:after {
+		content: "Go ahead, write whatever you want down here. It\2019 s your own paper.";
+	}
+}

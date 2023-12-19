@@ -1,0 +1,39 @@
+---
+title: Home
+layout: base
+---
+<a id="new-post" class="admin-link icon-edit" href="https://paper.19991919.xyz/new/master/_posts" title="New post"></a>
+<script>
+	document.getElementById('new-post').addEventListener('mousedown', function (e) {
+		var d = new Date();
+		e.target.href = 'https://paper.19991919.xyz/new/master' +
+			'?filename=' + encodeURIComponent(
+				'_posts/' +
+				d.getFullYear() + '-' +
+				('0' + (d.getMonth() + 1)).slice(-2) + '-' +
+				('0' + d.getDate()).slice(-2) +
+				'-new-post.md'
+			) +
+			'&value=' + encodeURIComponent(
+				'---\n' +
+				'date: ' + d.toString().replace('GMT', '') + '\n' +
+				'qualitative_time: \n' +
+				'title: New post\n' +
+				'previous_teaser: \n' +
+				'previous_first: ' + JSON.stringify(Math.random() < 0.5) + '\n' +
+				'---\n'
+			) +
+			'&message=new%20post';
+	});
+</script>
+<div class="navigation">
+	<h1>Articles&nbsp;<a class="feed-link icon-rss" rel="alternate" type="application/atom+xml" href="/articles.xml"></a></h1>
+	<ul>
+		{% for post in site.posts %}
+			<li>
+				<a href="{{ post.url }}">{{ post.title | smartify }}</a>
+				<p class="meta">{% include meta.txt post=post %}</p>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

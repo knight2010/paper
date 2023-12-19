@@ -1,0 +1,25 @@
+---
+layout: base
+---
+<a class="admin-link icon-github-circled-alt2" href="https://github.com/wh0/wh0.github.io/blob/master/{{ page.path }}" title="View source"></a>
+<div class="content">
+	{% if page.title %}<h1>{{ page.title | smartify }}</h1>{% endif %}
+	{% if page.date %}<p class="meta">{% include meta.txt post=page %}</p>{% endif %}
+	{{ content }}
+	{% if page.previous %}
+	<p class="previous">
+		{% if page.previous_teaser %}
+		My last post was about either
+		{% if page.previous_first %}
+		<strong>{{ page.previous.title | smartify }}</strong> or <strong>{{ page.previous_teaser | smartify }}</strong>.
+		{% else %}
+		<strong>{{ page.previous_teaser | smartify }}</strong> or <strong>{{ page.previous.title | smartify }}</strong>.
+		{% endif %}
+		Find out <a href="{{ page.previous.url }}">which</a>.
+		{% else %}
+		My last post was about <strong>{{ page.previous.title }}</strong>.
+		Have a <a href="{{ page.previous.url }}">look</a>.
+		{% endif %}
+	</p>
+	{% endif %}
+</div>
