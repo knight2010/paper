@@ -27,11 +27,11 @@ layout: base
 	});
 </script>
 <div class="navigation">
-	<h1>Articles&nbsp;<a class="feed-link icon-rss" rel="alternate" type="application/atom+xml" href="/articles.xml"></a></h1>
+	<h1>Articles&nbsp;<a class="feed-link icon-rss" rel="alternate" type="application/atom+xml" href="/paper/articles.xml"></a></h1>
 	<ul>
 		{% for post in site.posts %}
 			<li>
-				<a href="{{ post.url }}">{{ post.title | smartify }}</a>
+				<a href="/paper/{{ post.url }}">{{ post.title | smartify }}</a>
 				<p class="meta">{% include meta.txt post=post %}</p>
 			</li>
 		{% endfor %}
