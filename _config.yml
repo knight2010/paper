@@ -12,5 +12,5 @@ defaults:
 timezone: US/Pacific
 icon: https://avatars.githubusercontent.com/u/382696?v=3
 feed_author_name: Awesome
-feed_base: https://paper.19991919.xyz
-feed_id_authority: https://paper.19991919.xyz
+feed_base: http://hub.sourcesquarechina.online/paper/
+feed_id_authority: http://hub.sourcesquarechina.online/paper/
